@@ -39,7 +39,6 @@ class BrvmScraper:
 
             page.goto(url, timeout=60000)
 
-            # attendre que la table soit chargée par JS
             page.wait_for_selector("table tbody tr", timeout=60000)
 
             rows = page.query_selector_all("table tbody tr")
